@@ -1,12 +1,12 @@
 #!/usr/bin/python
 
 """
-Author             : Ms.ambari
-contact            : ambari.developer@gmail.com
-Github             : https://github.com/Ranginang67
-my youtube channel : Ms.ambari
+drustkar           : SHAFO KURDE
+snap               : br35308
+insta              : sha_fo_ka
+facebook           : shafo ka
 
-subcribe my youtube Channel to learn ethical Hacking ^_^
+tagawaratr dabm duzhmnm zortra boya daki nahaz bakerm^_^
 """
 
 import sys
