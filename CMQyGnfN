@@ -10,18 +10,17 @@ $white = "\033[0m";
 $date   = date('d-M-Y H:i');
 //system("clear");
 echo $red . "
-╔══╦╗╔╦══╦══╦═╗
-
-║══╣╚╝║╔╗║═╦╣║║
-
-╠══║╔╗║╠╣║╔╝║║║
-
-╚══╩╝╚╩╝╚╩╝─╚═╝
+╔═══╦╗─╔╦═══╦═══╦═══╗
+║╔═╗║║─║║╔═╗║╔══╣╔═╗║
+║╚══╣╚═╝║║─║║╚══╣║─║║
+╚══╗║╔═╗║╚═╝║╔══╣║─║║
+║╚═╝║║─║║╔═╗║║──║╚═╝║
+╚═══╩╝─╚╩╝─╚╩╝──╚═══╝
 
 ";
 echo $blue . "==================================";
 echo $bold . $green . "\nCoder   : php.Script Code
-Team    : INDOnimous Security Script
+SHAF:AGAR ROZHEK WESTYAN BT RUXENN BZANA SARKAWTUBUY
 Code    : PHP
 Version : 8.9.8.0
 Note: DRUST KRWA LALAYAN SHAFO 
