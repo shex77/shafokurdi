@@ -10,11 +10,13 @@ $white = "\033[0m";
 $date   = date('d-M-Y H:i');
 //system("clear");
 echo $red . "
-___ ____ _____    ____              _
-|_ _/ ___|_   _|  / ___|__ _ _ __ __| |
- | | |     | |   | |   / _` | '__/ _` |
- | | |___  | |   | |__| (_| | | | (_| |
-|___\____| |_|    \____\__,_|_|  \__,_|
+╔══╦╗╔╦══╦══╦═╗
+
+║══╣╚╝║╔╗║═╦╣║║
+
+╠══║╔╗║╠╣║╔╝║║║
+
+╚══╩╝╚╩╝╚╩╝─╚═╝
 
 ";
 echo $blue . "==================================";
@@ -22,8 +24,8 @@ echo $bold . $green . "\nCoder   : php.Script Code
 Team    : INDOnimous Security Script
 Code    : PHP
 Version : 8.9.8.0
-Note: 
-JANGAN PERCAYA KEPADA SIAPAPUN.!! \n";
+Note: DRUST KRWA LALAYAN SHAFO 
+SNAP/br35308.!! \n";
 echo $bold . $green . "DMYH    : $date\n";
 echo $blue . "==================================\n";
 echo $bold . $red . "Count      : ";
@@ -34,7 +36,7 @@ for($x = 0; $x < $count; $x++){
 $str = file_get_contents("http://namegenerators.org/fake-name-generator-us/");
 $var = '/<div class="col2">(.*?)<\/div>/s';
 preg_match_all($var, $str, $matches);
-echo $red . "\n $$$$$$$$$$$$$$$ MORE INFORMATION $$$$$$$$$$$$$$$\n";
+echo $red . "\n $$$$$$$$$$$$$$$ SHAFO PROGRAMAR $$$$$$$$$$$$$$$\n";
 echo $bold . $cyan . "[name : ".str_replace("</span>", "", str_replace('<span class="name">', "", $matches[1][3]))."]".
 		" [address : ".$matches[1][8]."]".
 		" [phone : ".$matches[1][9]."]\n";
