@@ -2,7 +2,7 @@
 
 
 sleep 2
-figlet SHAFO KURDE
+figlet shafo
 sleep 2
 apt-get update && apt-get upgrade
 sleep 2
