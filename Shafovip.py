@@ -109,7 +109,7 @@ print("")
 
 print("")
 
-input("انقر فوق إدخال (enter) لإغلاق الأداة")
+input("KLICK BKA LA  (enter) BY")
 
 exit()
 
