@@ -1,125 +1,131 @@
-import random
+import requests,uuid,secrets
 
-import string
+print("""im not spam machine
 
-import itertools
+⠀⠀⠀⠀⠀⠀⣠⣴⣶⣿⠿⢿⣶⣶⣦⣄⠀⠀⠀⠀
 
-import threading
+⠀⠀⠀⠀⠀⣼⡿⠋⠁⠀⠀⠀⢀⣈⠙⢿⣷⡄⠀⠀
 
-import time
+⠀⠀⠀⠀⢸⣿⠁⠀⢀⣴⣿⠿⠿⠿⠿⠿⢿⣷⣄⠀
 
-import sys
+⠀⢀⣀⣠⣾⣿⡇⠀⣾⣿⡄⠀⠀⠀⠀⠀⠀⠀⠹⣧
 
- 
+⣾⡿⠉⠉⣿⠀⡇⠀⠸⣿⡌⠓⠶⠤⣤⡤⠶⢚⣻⡟
 
-done = False
+⣿⣧⠖⠒⣿⡄⡇⠀⠀⠙⢿⣷⣶⣶⣶⣶⣶⢿⣿⠀
 
-#here is the animation
+⣿⡇⠀⠀⣿⡇⢰⠀⠀⠀⠀⠈⠉⠉⠉⠁⠀⠀⣿⠀
 
-def animate():
+⣿⡇⠀⠀⣿⡇⠈⡄⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⠀
 
-    for c in itertools.cycle(['|', '/', '-', '\\']):
+⣿⣷⠀⠀⣿⡇⠀⠘⠦⣄⣀⣀⣀⣀⣀⡤⠊⠀⣿⠀
 
-        if done:
+⢿⣿⣤⣀⣿⡇⠀⠀⠀⢀⣀⣉⡉⠁⣀⡀⠀⣾⡟⠀
 
-            break
+⠀⠉⠛⠛⣿⡇⠀⠀⠀⠀⣿⡟⣿⡟⠋⠀⢰⣿⠃⠀
 
-        sys.stdout.write('\rloading ' + c)
+⠀⠀⠀⠀⣿⣧⠀⠀⠀⢀⣿⠃⣿⣇⠀⢀⣸⡯⠀⠀
 
-        sys.stdout.flush()
-
-        time.sleep(0.1)
-
-    sys.stdout.write('\rReady to spam!     ')
+⠀⠀⠀⠀⠹⢿⣶⣶⣶⠿⠃⠀⠈⠛⠛⠛⠛⠁⠀⠀
 
  
 
-t = threading.Thread(target=animate)
+ 
+
+                                     """)
 
  
 
-print(""" 
+ 
+
+print("telegram:tll86")                         
 
  
 
-╔═══╦╗─╔╦═══╦═══╦═══╗
-║╔═╗║║─║║╔═╗║╔══╣╔═╗║
-║╚══╣╚═╝║║─║║╚══╣║─║║
-╚══╗║╔═╗║╚═╝║╔══╣║─║║
-║╚═╝║║─║║╔═╗║║──║╚═╝║
-╚═══╩╝─╚╩╝─╚╩╝──╚═══╝
-
-
-
-
-
-
-""")                                                                                  
-
-A = """
+ 
 
  
 
-instagram:sha_fo_ka
+from time import sleep
+
+uid = uuid.uuid4()
 
  
 
-"""
-
-print ("")
-
-print(A)
-
-t.start()
-
-time.sleep(10)
-
-done = True
+ 
 
  
 
-typeU = int(input('Enter user type: '))
+ 
 
-length = int(input('length of user: '))
+r = requests.Session()
 
-file = open('usernames.txt', 'w')
+cookie = secrets.token_hex(8)*2
+
+username = input('your user:')
+
+password = input('your password:')
+
+target = input('target:')
+
+sle = int(input('sleep:'))
+
+def login():
+
+    global username
+
+    global password
+
+    url = 'https://www.instagram.com/accounts/login/ajax/'
+
+    headers = {"user-agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36', 'x-csrftoken': 'missing', 'mid': cookie}
+
+    data = {'username':username,
+
+            'enc_password': '#PWD_INSTAGRAM_BROWSER:0:1589682409:{}'.format(password),
+
+            'queryParams': '{}',
+
+            'optIntoOneTap': 'false',}
+
+    req_login = r.post(url,headers=headers,data=data)
+
+    if ("userId") in req_login.text:
+
+        r.headers.update({'X-CSRFToken': req_login.cookies['csrftoken']})
+
+        print('login True')
+
+        url_id = 'https://www.instagram.com/{}/?__a=1'.format(target)
+
+        req_id = r.get(url_id).json()
+
+        user_id = str(req_id['logging_page_id'])
+
+        idd = user_id.split('_')[1]
+
+        done = 1
+
+        while True:
+
+            url_report = 'https://www.instagram.com/users/{}/report/'.format(idd)
+
+            datas = {'source_name':'','reason_id':1,'frx_context':''} #spam
+
+            report = r.post(url_report,data=datas)
+
+            print('done spam {}'.format(done))
+
+            sleep(sle)
+
+            done += 1
+
+    else:
+
+        print('login false')
+
+        exit()
 
  
 
-if typeU == 4:
-
-  user = string.ascii_lowercase + string.digits
-
-  le = 1
-
-  while le < length:
-
-    file.write(''.join(random.choice(user) for i in range(4))+'\r\n')
-
-    le += 1
-
-elif typeU == 3:
-
-  user = string.ascii_lowercase + string.digits
-
-  le = 1
-
-  while le < length:
-
-    file.write(''.join(random.choice(user) for i in range(3))+'\r\n')
-
-    le += 1
-
-elif typeU == 2:
-
-  user = string.ascii_lowercase + string.digits
-
-  le = 1
-
-  while le < length:
-
-    file.write(''.join(random.choice(user) for i in range(2))+'\r\n')
-
-    le += 1
-
-file.close()
+login()
