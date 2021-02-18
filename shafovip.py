@@ -10,8 +10,8 @@ print("""
 ─▀▀▀▄▄ ░█▀▀█ ░█▄▄█ ░█▀▀▀ ░█──░█ 
 ░█▄▄▄█ ░█─░█ ░█─░█ ░█─── ░█▄▄▄█
 
-
-print ('drustkrawa lalayan SHAFO')
+adm kan bo tole zya tr insta(sha_fo_ka)
+drustkrawa lalayan SHAFO
 
 
 
