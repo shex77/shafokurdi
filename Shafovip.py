@@ -13,6 +13,7 @@ print("""
               
 
                             by @SHAFO
+                            add me insta sha_fo_ka
 
 """)
 
@@ -52,11 +53,11 @@ def check_email():
 
  if rr.text.find("LIVE") >= 0:
 
-     print(f"✔️ الإيميل  موجد في جميل >> [ {target} ] ")
+     print(f"✔️ HAYA LA INSTA GRAM >> [ {target} ] ")
 
  else:
 
-     print(f"✖️ الإيميل ليس موجد في جميل  >> [ {target} ]")
+     print(f"✖️ NYA LA INSTA GRAM  >> [ {target} ]")
 
 def check_instagram():
 
@@ -92,11 +93,11 @@ def check_instagram():
 
     if rr.status_code == 200:
 
-        print(f" ✔️ الايميل موجود في الانستقرام >> [ {target} ]")
+        print(f" ✔️ HAYA LA INSTA >> [ {target} ]")
 
     else:
 
-        print(f" ✖️ الإيميل ليس موجود في الانستقرام >> [ {target} ]")
+        print(f" ✖️ NYA LA INSTA >> [ {target} ]")
 
 check_email()
 
